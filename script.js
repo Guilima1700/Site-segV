@@ -56,3 +56,5 @@ tl.fromTo(
 
 gsap.utils.toArray(".g").forEach(($el) => Line($el));
 gsap.to("svg", { opacity: 1, duration: 1 });
+
+

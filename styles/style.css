@@ -54,13 +54,22 @@ svg {
 }
 
 .item {
-    background-color: #07B198;
     padding: 10px;
-    border-radius: 50px;
 }
 
 .item1 {
+    transition: 0.5s;
     padding: 10px;
+}
+
+.item1:hover {
+    background-color: #07B198;
+    border-radius: 50px;
+}
+
+.item1:active {
+    background-color: #07B198;
+    border-radius: 50px;
 }
 
 .logo {
@@ -88,14 +97,14 @@ svg {
 
 .texto-container-1 h1 {
     text-transform: uppercase;
-    font-size: 55px;
+    font-size: 75px;
     font-weight: bold;
 }
 
 .texto-container-1 h2 {
     text-transform: uppercase;
     font-weight: bold;
-    color: #2c9caf;
+    color: #fff;
     font-size: 25px;
 }
 
@@ -161,33 +170,8 @@ button:hover::before {
     color: #2c9caf;
 
 }
-/*
-.blur {
-    border-radius: 15px;
-    z-index: 1;
-    position: absolute;
-    width: 20rem;
-    height: 20rem;
-    background: rgb(119, 164, 236);
-    margin-left: 79rem;
-    margin-top: -2%;
-    filter: blur(90px) brightness(2.5);
-    opacity: 0.5;
-}
 
-.blur1 {
-    z-index: 1;
-    background-color: #000;
-    border-radius: 50%;
-    width: 27rem;
-    height: 11rem;
-    position: absolute;
-    margin-left: 72rem;
-    margin-top: 42%;
-    filter: blur(14px);
-    transform: rotate(-4deg);
-    opacity: 0.4;
-}*/
+
 
 #cam {
     width: 45rem;
@@ -201,8 +185,8 @@ button:hover::before {
     display: flex;
     width: 100%;
     padding: 30px;
-    color: #2c9caf;
-    background-color: #fff;
+    color: #fff;
+    background: radial-gradient(circle, rgb(10, 60, 202) 0%, #042e52 100%);
 }
 
 
@@ -210,11 +194,12 @@ button:hover::before {
     align-items: center;
     text-align: center;
     display: flex;
-    gap: 10rem;
+    gap: 20rem;
     margin: 0 auto;
 }
 
-.inf-cam {
+.cont-text p {
+    z-index: 2;
     text-transform: uppercase;
     width: 15rem;
     margin: 0 auto;
@@ -223,11 +208,12 @@ button:hover::before {
     font-size: 1.5rem;
 }
 
-.inf-cam-p {
+.cont-text h3 {
+    z-index: 2;
     margin: 0 auto;
     font-size: 1.5rem;
     font-weight: bold;
-    width: 16rem;
+    width: 18rem;
     text-transform: uppercase;
 }
 
@@ -241,131 +227,23 @@ button:hover::before {
 
 .container-2 {
     display: flex;
-    margin-left: 30rem;
+    margin-left: 25rem;
 }
 
 .cards-cont {
-    width: 20rem;
-    height: 20rem;
+    width: 40rem;
+    height: 50rem;
+    margin-top: -10rem;
+    z-index: 2;
 }
 
-.man1 {
-    border-radius: 10px;
-    margin-top: -8rem;
-    margin-left: -2rem;
-    width: 16rem;
-    height: 20rem;
-}
 
-.man2 {
-    border-radius: 10px;
-    margin-top: 2rem;
-    margin-left: 16.5rem;
-    width: 16rem;
-    height: 20rem;
-}
-
-.notification {
-    padding: 5px;
-    margin-left: 75%;
-    margin-top: -20rem;
-    display: flex;
-    flex-direction: column;
-    isolation: isolate;
-    position: relative;
-    width: 18rem;
-    height: 8rem;
-    background: #29292c;
-    border-radius: 1rem;
-    overflow: hidden;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 16px;
-    --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff);
-    --color: #32a6ff
-  }
-  
-  .notification:before {
-    position: absolute;
-    content: "";
-    inset: 0.0625rem;
-    border-radius: 0.9375rem;
-    background: #18181b;
-    z-index: 2
-  }
-  
-  .notification:after {
-    position: absolute;
-    content: "";
-    width: 0.25rem;
-    inset: 0.65rem auto 0.65rem 0.5rem;
-    border-radius: 0.125rem;
-    background: var(--gradient);
-    transition: transform 300ms ease;
+.blur-base {
+    margin-top: 8%;
     z-index: 4;
-  }
-  
-  .notification:hover:after {
-    transform: translateX(0.15rem)
-  }
-  
-  .notititle {
-    color: var(--color);
-    padding: 0.65rem 0.25rem 0.4rem 1.25rem;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: transform 300ms ease;
-    z-index: 5;
-  }
-  
-  .notification:hover .notititle {
-    transform: translateX(0.15rem)
-  }
-  
-  .notibody {
-    color: #99999d;
-    padding: 0 1.25rem;
-    transition: transform 300ms ease;
-    z-index: 5;
-  }
-  
-  .notification:hover .notibody {
-    transform: translateX(0.25rem)
-  }
-  
-  .notiglow,
-  .notiborderglow {
     position: absolute;
-    width: 20rem;
-    height: 20rem;
-    transform: translate(-50%, -50%);
-    background: radial-gradient(circle closest-side at center, white, transparent);
-    opacity: 0;
-    transition: opacity 300ms ease;
-  }
-  
-  .notiglow {
-    z-index: 3;
-  }
-  
-  .notiborderglow {
-    z-index: 1;
-  }
-  
-  .notification:hover .notiglow {
-    opacity: 0.1
-  }
-  
-  .notification:hover .notiborderglow {
-    opacity: 0.1
-  }
-  
-  .note {
-    color: var(--color);
-    position: fixed;
-    top: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    font-size: 0.9rem;
-    width: 75%;
+    background: radial-gradient(circle, rgb(10, 60, 202) 0%, #042e52 100%);
+    height: 6rem;
+    width: 100%;
+    filter: blur(40px);
 }
