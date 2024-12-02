@@ -13,6 +13,8 @@ html {
 
 body {
     overflow-x: hidden;
+    background-color: #0e4166;
+    background-image: linear-gradient(to bottom, rgba(14, 65, 102, 0.86), #0e4166);
 }
 
 svg {
@@ -24,15 +26,13 @@ svg {
     height: 100%;
     box-sizing: border-box;
     display: block;
-    background-color: #0e4166;
-    background-image: linear-gradient(to bottom, rgba(14, 65, 102, 0.86), #0e4166);
+
 }
 
 
 .container-1 {
     position: relative;
     z-index: 2;
-    
     height: 100vh;
 }
 
@@ -90,7 +90,7 @@ svg {
     z-index: 2;
     color: white;
     margin-left: 6%;
-    margin-top: 2%;
+    margin-top: 7%;
     display: flex;
     width: 45rem;
     height: 30rem;
@@ -99,7 +99,8 @@ svg {
 .texto-container-1 h1 {
     font-family: Teko;
     text-transform: uppercase;
-    font-size: 17rem;
+    font-size: 60px;
+    width: 60vh;
     font-weight: bold;
 }
 
@@ -107,8 +108,8 @@ svg {
     text-transform: uppercase;
     font-weight: bold;
     color: #fff;
-    font-size: 25px;
-    margin-top: -6rem;
+    font-size: 15px;
+    width: 35rem;
 }
 
 .texto-container-1 p {
@@ -193,16 +194,27 @@ button:hover::before {
     width: 65rem;
     height: 45rem;
     margin-top: 4.5rem;
-    margin-left: 4rem;
+    margin-left: -4rem;
     padding: 20px;
 }
 
-.cards-cont img {
-    z-index: 2;
-    height: auto;
-    width: 85rem;
+#man-front {
+    z-index: 1;
+    width: 65rem;
+    height: 42rem;
     position: absolute;
-    margin-top: -12.4%;
+    margin-left: 10rem;
+    margin-top: -5.5%;
+}
+
+#man-back {
+    z-index: 1;
+    position: absolute;
+    margin-top: -12rem;
+    height: 60vh;
+    width: 40rem;
+    margin-left: 33rem;
+    filter: brightness(0.9) contrast(1.2) saturate(1.5) blur(0.2px);
 }
 
 
