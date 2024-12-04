@@ -1,50 +1,60 @@
+:root {
+    --font-h1: 2.6rem;
+    --h1-bold: 700;
+    --font-p: 1.1rem;
+    --p-bold: 500;
+    --padding-section: 15vh 20vh;
+    --shadow-h1: 2px 2px 5px black;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", serif;
-} 
-
-body,
-html {
-    width: 100%;
-    height: 100%;
 }
 
 body {
     overflow-x: hidden;
     background-color: #0e4166;
-    background-image: linear-gradient(to bottom, rgba(14, 65, 102, 0.86), #0e4166);
+    transition: all 500ms;
 }
 
-svg {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    display: block;
-
-}
-
-
-.container-1 {
-    position: relative;
-    z-index: 2;
-    height: 100vh;
-}
-
-.cabecalho-container-1 {
+.cabecalho {
+    transition: all 515ms;
     justify-content: space-between;
     display: flex;
-    padding: 20px 75px 0px 75px;
+    padding: 4vh 20vh 0vh 20vh;
     align-items: center;
-    z-index: 2;
+    z-index: 999;
+    background: transparent;
+    height: 12vh;
+    position: sticky;
+    top: 0;
 }
 
-#menu-cabecalho {
+.cabecalho-sticky {
+    transition: all 515ms;
+    background-color: #0e4166;
+    padding: 0vh 20vh;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    height: 10vh;
+}
+
+.menu-cabecalho-sticky {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    align-items: center;
+}
+
+.menu-cabecalho-sticky li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.menu-cabecalho {
     background-color: #ffffff46;
     display: flex;
     list-style: none;
@@ -54,7 +64,7 @@ svg {
     border-radius: 50px;
 }
 
-#menu-cabecalho li a {
+.menu-cabecalho li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -62,19 +72,16 @@ svg {
 
 .item {
     padding: 10px;
-}
-
-.item1 {
     transition: 0.5s;
     padding: 10px;
 }
 
-.item1:hover {
+.item:hover {
     background-color: #07B198;
     border-radius: 50px;
 }
 
-.item1:active {
+.item:active {
     background-color: #07B198;
     border-radius: 50px;
 }
@@ -85,43 +92,47 @@ svg {
     height: 2rem;
 }
 
-.texto-container-1 {
-    padding: 20px;
+.container-1 {
+    position: relative;
     z-index: 2;
+    padding: var(--padding-section);
+    height: 88vh;
+    transition: all 515ms;
+}
+
+.texto-container-1 header {
     color: white;
-    margin-left: 6%;
-    margin-top: 7%;
-    display: flex;
-    width: 45rem;
-    height: 30rem;
+    width: 42rem;
 }
 
 .texto-container-1 h1 {
-    font-family: Teko;
     text-transform: uppercase;
-    font-size: 60px;
-    width: 60vh;
-    font-weight: bold;
-}
-
-.texto-container-1 h2 {
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #fff;
-    font-size: 15px;
-    width: 35rem;
+    font-size: var(--font-h1);
+    font-weight: var(--h1-bold);
+    text-shadow: var(--shadow-h1);
+    font-family: 'Teko';
 }
 
 .texto-container-1 p {
-    margin-top: 5px;
-    width: 600px;
+    font-weight: var(--p-bold);
+    color: #fff;
+    font-size: var(--font-p);
+    margin-top: 1vh;
     text-align: justify;
-    font-size: 15px;
-    margin-bottom: 12px;
+}
+
+#man-front {
+    z-index: 1;
+    width: 85vh;
+    height: 80vh;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    padding-right: 20vh;
 }
 
 .button {
-    margin-top: 10PX;
+    margin-top: 25px;
     padding: 1em 2em;
     border: none;
     border-radius: 5px;
@@ -167,115 +178,61 @@ button:hover::before {
     color: white;
 }
 
-.button {
-    margin-top: 25px;
-}
-
-.color {
-    color: #2c9caf;
-}
-
-.color-v {
-    font-family: Teko;
-    font-weight: bold;
-    color: #2c9caf;
-}
-
-.h2 {
-    width: 20rem;
+svg {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: block;
 }
 
 .container-2 {
-    display: flex;
-}
-
-.cards-cont {
-    position: relative;
-    width: 65rem;
-    height: 45rem;
-    margin-top: 4.5rem;
-    margin-left: -4rem;
-    padding: 20px;
-}
-
-#man-front {
-    z-index: 1;
-    width: 65rem;
-    height: 42rem;
-    position: absolute;
-    margin-left: 10rem;
-    margin-top: -5.5%;
-}
-
-#man-back {
-    z-index: 1;
-    position: absolute;
-    margin-top: -12rem;
-    height: 60vh;
-    width: 40rem;
-    margin-left: 33rem;
-    filter: brightness(0.9) contrast(1.2) saturate(1.5) blur(0.2px);
-}
-
-
-.container-3 {
     z-index: 5;
-    padding: 100px 75px;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    height: 100vh;
-    overflow: hidden;
     display: flex;
-    font-family: 'Anton', sans-serif;
     justify-content: center;
     align-items: center;
+    padding: var(--padding-section);
 }
 
-#img1-c-3 {
-    width: 26rem;
+#img1-c-2 {
+    width: 24rem;
 }
 
-#img2-c-3 {
+#img2-c-2 {
     z-index: 6;
     margin-top: -21rem;
     margin-left: 9rem;
-    width: 26rem;
+    width: 24rem;
 }
 
-.conteudo-container-3 {
+.conteudo-container-2 {
     display: flex;
-    justify-content: space-between;
 }
 
-.texto-container-3 span {
+.texto-container-2 span {
     color: #70c4d3;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: var(--font-p);
 }
 
-.texto-container-3 {
+.texto-container-2 {
     margin-left: 15rem;
     font-size: 1.5rem;
     color: white;
 }
 
-.texto-container-3 button {
-    margin-top: 25px;
-    padding: 1em 2em;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 1000ms;
-    font-size: 15px;
-    position: relative;
-    overflow: hidden;
-    outline: 2px solid #2c9caf;
-    background-color: #2c9caf;
-    color: white;
+.texto-container-2 h1 {
+    font-size: var(--font-h1);
+    font-weight: var(--h1-bold);
+    text-shadow: var(--shadow-h1);
+    font-family: 'Teko';
 }
 
-.texto-container-3 button a {
-    color: white;
-    text-decoration: none;
+.texto-container-2 p {
+    font-weight: var(--p-bold);
+    font-size: var(--font-p);
 }
