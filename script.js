@@ -14,17 +14,14 @@ function lerMenos(){
 document.addEventListener('scroll', function () {
     const menu = document.getElementById('cabecalho');
     const itensMenu = document.getElementById('menu-cabecalho');
-    const container1 = document.getElementById('container-1');
 
     if (window.scrollY > 50) { 
         menu.classList.add('cabecalho-sticky');
         itensMenu.classList.remove('menu-cabecalho');
         itensMenu.classList.add('menu-cabecalho-sticky');
-        container1.style.height = '90vh'
     } else {
         menu.classList.remove('cabecalho-sticky');
         itensMenu.classList.add('menu-cabecalho');
         itensMenu.classList.remove('menu-cabecalho-sticky');
-        container1.style.height = '88vh'
     }
 });
